@@ -1,4 +1,6 @@
-/* DataBase_ApCoders_Logico: */
+CREATE DATABASE apcoders
+
+USE apcoders
 
 CREATE TABLE Despesas (
     ID INT PRIMARY KEY AUTO_INCREMENT,
