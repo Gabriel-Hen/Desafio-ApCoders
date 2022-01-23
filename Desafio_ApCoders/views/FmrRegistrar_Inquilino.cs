@@ -47,6 +47,11 @@ namespace Desafio_ApCoders.views
                 cmdRegistrar_Unidade.ExecuteReader();
 
                 MessageBox.Show("Registrado com sucesso");
+                TxtUnidade_id_inquilino.Clear();
+                TxtNome.Clear();
+                TxtIdade.Clear();
+                TxtTelefone.Clear();
+                TxtEmail.Clear();
             }
             catch (Exception ex)
             {

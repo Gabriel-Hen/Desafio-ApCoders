@@ -166,6 +166,7 @@
             this.TxtVencimento_Fatura.Name = "TxtVencimento_Fatura";
             this.TxtVencimento_Fatura.Size = new System.Drawing.Size(163, 22);
             this.TxtVencimento_Fatura.TabIndex = 33;
+            this.TxtVencimento_Fatura.TextChanged += new System.EventHandler(this.TxtVencimento_Fatura_TextChanged);
             // 
             // FmrRegistrar_Depesas
             // 

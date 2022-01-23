@@ -39,7 +39,7 @@ namespace Desafio_ApCoders.views
 
                 string registrar_despesa = "INSERT INTO despesas (unidade_id, descricao, tipo_despesa, valor, vencimento_fatura, status_pagamento ) " +
                     "VALUES " +
-                    "('" + TxtUnidade_Id_despesa.Text + "','" + TxtDescricao.Text + "', '" + TxtTipo_despesa.Text + "', '" + TxtValor.Text + "','" + TxtVencimento_Fatura + "', '" + CmbStatus_Pagamento.Text + "')";
+                    "('" + TxtUnidade_Id_despesa.Text + "','" + TxtDescricao.Text + "', '" + TxtTipo_despesa.Text + "', '" + TxtValor.Text + "','" + TxtVencimento_Fatura.Text + "', '" + CmbStatus_Pagamento.Text + "')";
 
                 MySqlCommand cmdRegistrar_Despesa = new MySqlCommand(registrar_despesa, connection);
 
@@ -47,6 +47,11 @@ namespace Desafio_ApCoders.views
                 cmdRegistrar_Despesa.ExecuteReader();
 
                 MessageBox.Show("Registrado com sucesso");
+                TxtDescricao.Clear();
+                TxtTipo_despesa.Clear();
+                TxtUnidade_Id_despesa.Clear();
+                TxtValor.Clear();
+                TxtVencimento_Fatura.Clear();
             }
             catch (Exception ex)
             {
@@ -59,5 +64,9 @@ namespace Desafio_ApCoders.views
 
         }
 
+        private void TxtVencimento_Fatura_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

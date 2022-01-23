@@ -52,7 +52,12 @@ namespace Desafio_ApCoders.views
                 cmdRegistrar_Unidade.ExecuteReader();
 
                 MessageBox.Show("Registrado com sucesso");
-            }catch (Exception ex) 
+                TxtIdentificacao.Clear();
+                TxtProprietario.Clear();
+                TxtCondominio.Clear();
+                TxtEndereco.Clear();
+            }
+            catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message);
             }

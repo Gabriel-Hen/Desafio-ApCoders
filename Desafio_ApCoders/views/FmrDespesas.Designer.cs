@@ -67,6 +67,7 @@
             this.BtnAtualizar_Despesas.TabIndex = 4;
             this.BtnAtualizar_Despesas.Text = "Atualizar";
             this.BtnAtualizar_Despesas.UseVisualStyleBackColor = true;
+            this.BtnAtualizar_Despesas.Click += new System.EventHandler(this.BtnAtualizar_Despesas_Click);
             // 
             // label1
             // 

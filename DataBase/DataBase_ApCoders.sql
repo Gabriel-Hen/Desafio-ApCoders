@@ -1,37 +1,39 @@
 /* DataBase_ApCoders_Logico: */
 
 CREATE TABLE Despesas (
-    descricao varchar(250),
-    tipo_despesa varchar(250),
-    valor decimal,
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Unidade_ID INT,
+    descricao VARCHAR(250),
+    tipo_despesa VARCHAR(250),
+    valor DECIMAL,
     vencimento_fatura DATE,
-    status_pagamento BOOLEAN,
-    unidade_id INT
+    status_pagamento VARCHAR(6)
 );
 
 CREATE TABLE Unidade (
-    identificacao varchar(250),
-    proprietario varchar(250),
-    condominio varchar(250),
-    endereco varchar(250),
-    ID INT PRIMARY KEY
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    identificacao VARCHAR(250),
+    proprietario VARCHAR(250),
+    condominio VARCHAR(250),
+    endereco VARCHAR(400)
 );
 
 CREATE TABLE Inquilinos (
-    nome varchar(250),
-    idade NUMERIC,
-    sexo BOOLEAN,
-    telefone varchar(13),
-    email varchar(250),
-    unidade_id INT
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Unidade_ID INT,
+    nome VARCHAR(250),
+    idade INT,
+    sexo VARCHAR(10),
+    telefone VARCHAR(14),
+    email VARCHAR(250)
 );
  
-ALTER TABLE Despesas ADD CONSTRAINT FK_Despesas_1
-    FOREIGN KEY (unidade_id)
+ALTER TABLE Despesas ADD CONSTRAINT FK_Despesas_2
+    FOREIGN KEY (Unidade_ID)
     REFERENCES Unidade (ID)
     ON DELETE CASCADE;
  
-ALTER TABLE Inquilinos ADD CONSTRAINT FK_Inquilinos_1
-    FOREIGN KEY (unidade_id)
+ALTER TABLE Inquilinos ADD CONSTRAINT FK_Inquilinos_2
+    FOREIGN KEY (Unidade_ID)
     REFERENCES Unidade (ID)
     ON DELETE CASCADE;

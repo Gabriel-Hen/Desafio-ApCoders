@@ -85,5 +85,47 @@ namespace Desafio_ApCoders.views
 
         }
 
+        private void BtnAtualizar_Despesas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                connection = new MySqlConnection("datasource=localhost;username=root;password=r8o5o4t8;database=apcoders");
+
+                string view_unidade = "SELECT * FROM  despesas";
+
+                connection.Open();
+
+                MySqlCommand cmdView_Unidade = new MySqlCommand(view_unidade, connection);
+                MySqlDataReader Leitor_Despesas = cmdView_Unidade.ExecuteReader();
+
+                LstDespesas.Items.Clear();
+
+
+                while (Leitor_Despesas.Read())
+                {
+                    string[] row =
+                    {
+                        Leitor_Despesas.GetString(0),
+                        Leitor_Despesas.GetString(1),
+                        Leitor_Despesas.GetString(2),
+                        Leitor_Despesas.GetString(3),
+                        Leitor_Despesas.GetString(4),
+                        Leitor_Despesas.GetString(5),
+                        Leitor_Despesas.GetString(6),
+                    };
+                    var LstViewItem = new ListViewItem(row);
+
+                    LstDespesas.Items.Add(LstViewItem);
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
