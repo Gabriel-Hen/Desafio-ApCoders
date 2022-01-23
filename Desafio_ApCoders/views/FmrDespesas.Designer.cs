@@ -28,111 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LstInquilinos = new System.Windows.Forms.ListView();
-            this.Id_Despesas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Tipo_Despesa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Valor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Vencimento_Fatura = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Status_Pagamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Unidade_Despesa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmrDespesas));
+            this.LstDespesas = new System.Windows.Forms.ListView();
             this.BtnRegistro_Despesa = new System.Windows.Forms.Button();
+            this.BtnAtualizar_Despesas = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // LstInquilinos
+            // LstDespesas
             // 
-            this.LstInquilinos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Unidade_Despesa,
-            this.Id_Despesas,
-            this.Descricao,
-            this.Tipo_Despesa,
-            this.Valor,
-            this.Vencimento_Fatura,
-            this.Status_Pagamento});
-            this.LstInquilinos.FullRowSelect = true;
-            this.LstInquilinos.GridLines = true;
-            this.LstInquilinos.HideSelection = false;
-            this.LstInquilinos.Location = new System.Drawing.Point(12, 12);
-            this.LstInquilinos.MultiSelect = false;
-            this.LstInquilinos.Name = "LstInquilinos";
-            this.LstInquilinos.Size = new System.Drawing.Size(776, 271);
-            this.LstInquilinos.TabIndex = 2;
-            this.LstInquilinos.UseCompatibleStateImageBehavior = false;
-            this.LstInquilinos.View = System.Windows.Forms.View.Details;
-            // 
-            // Id_Despesas
-            // 
-            this.Id_Despesas.DisplayIndex = 0;
-            this.Id_Despesas.Text = "ID";
-            // 
-            // Descricao
-            // 
-            this.Descricao.DisplayIndex = 1;
-            this.Descricao.Text = "Descrição";
-            this.Descricao.Width = 159;
-            // 
-            // Tipo_Despesa
-            // 
-            this.Tipo_Despesa.DisplayIndex = 2;
-            this.Tipo_Despesa.Text = "Tipo Despesa";
-            this.Tipo_Despesa.Width = 176;
-            // 
-            // Valor
-            // 
-            this.Valor.DisplayIndex = 3;
-            this.Valor.Text = "Valor";
-            this.Valor.Width = 98;
-            // 
-            // Vencimento_Fatura
-            // 
-            this.Vencimento_Fatura.DisplayIndex = 4;
-            this.Vencimento_Fatura.Text = "Vencimento Fatura";
-            this.Vencimento_Fatura.Width = 104;
-            // 
-            // Status_Pagamento
-            // 
-            this.Status_Pagamento.DisplayIndex = 5;
-            this.Status_Pagamento.Text = "Status Pagamento";
-            this.Status_Pagamento.Width = 103;
-            // 
-            // Unidade_Despesa
-            // 
-            this.Unidade_Despesa.DisplayIndex = 6;
-            this.Unidade_Despesa.Text = "ID Unidade";
-            this.Unidade_Despesa.Width = 69;
+            this.LstDespesas.HideSelection = false;
+            this.LstDespesas.Location = new System.Drawing.Point(12, 70);
+            this.LstDespesas.Name = "LstDespesas";
+            this.LstDespesas.Size = new System.Drawing.Size(1299, 314);
+            this.LstDespesas.TabIndex = 2;
+            this.LstDespesas.UseCompatibleStateImageBehavior = false;
+            this.LstDespesas.SelectedIndexChanged += new System.EventHandler(this.LstDespesas_SelectedIndexChanged);
             // 
             // BtnRegistro_Despesa
             // 
-            this.BtnRegistro_Despesa.Location = new System.Drawing.Point(626, 324);
+            this.BtnRegistro_Despesa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistro_Despesa.Location = new System.Drawing.Point(1166, 9);
             this.BtnRegistro_Despesa.Name = "BtnRegistro_Despesa";
-            this.BtnRegistro_Despesa.Size = new System.Drawing.Size(138, 50);
+            this.BtnRegistro_Despesa.Size = new System.Drawing.Size(145, 55);
             this.BtnRegistro_Despesa.TabIndex = 3;
             this.BtnRegistro_Despesa.Text = "Registrar";
             this.BtnRegistro_Despesa.UseVisualStyleBackColor = true;
+            this.BtnRegistro_Despesa.Click += new System.EventHandler(this.BtnRegistro_Despesa_Click);
+            // 
+            // BtnAtualizar_Despesas
+            // 
+            this.BtnAtualizar_Despesas.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAtualizar_Despesas.Image = global::Desafio_ApCoders.Properties.Resources.refresh_curve_arrows_icon_icons_com_68503__1_;
+            this.BtnAtualizar_Despesas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAtualizar_Despesas.Location = new System.Drawing.Point(12, 9);
+            this.BtnAtualizar_Despesas.Name = "BtnAtualizar_Despesas";
+            this.BtnAtualizar_Despesas.Size = new System.Drawing.Size(187, 55);
+            this.BtnAtualizar_Despesas.TabIndex = 4;
+            this.BtnAtualizar_Despesas.Text = "Atualizar";
+            this.BtnAtualizar_Despesas.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(619, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 42);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Despesas";
             // 
             // FmrDespesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1323, 396);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnAtualizar_Despesas);
             this.Controls.Add(this.BtnRegistro_Despesa);
-            this.Controls.Add(this.LstInquilinos);
+            this.Controls.Add(this.LstDespesas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FmrDespesas";
-            this.Text = "FmrDespesas";
+            this.Text = "Despesas";
+            this.Load += new System.EventHandler(this.FmrDespesas_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView LstInquilinos;
-        private System.Windows.Forms.ColumnHeader Id_Despesas;
-        private System.Windows.Forms.ColumnHeader Descricao;
-        private System.Windows.Forms.ColumnHeader Tipo_Despesa;
-        private System.Windows.Forms.ColumnHeader Valor;
-        private System.Windows.Forms.ColumnHeader Vencimento_Fatura;
-        private System.Windows.Forms.ColumnHeader Status_Pagamento;
-        private System.Windows.Forms.ColumnHeader Unidade_Despesa;
         private System.Windows.Forms.Button BtnRegistro_Despesa;
+        private System.Windows.Forms.Button BtnAtualizar_Despesas;
+        public System.Windows.Forms.ListView LstDespesas;
+        private System.Windows.Forms.Label label1;
     }
 }

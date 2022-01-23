@@ -28,96 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmrInquilinos));
             this.LstInquilinos = new System.Windows.Forms.ListView();
-            this.Id_inquilinos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Idade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Sexo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BtnRegistro_Inquilino = new System.Windows.Forms.Button();
+            this.BtnAtualizar_Inquilinos = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LstInquilinos
             // 
-            this.LstInquilinos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Id_inquilinos,
-            this.Nome,
-            this.Idade,
-            this.Sexo,
-            this.Telefone,
-            this.Email});
-            this.LstInquilinos.FullRowSelect = true;
-            this.LstInquilinos.GridLines = true;
             this.LstInquilinos.HideSelection = false;
-            this.LstInquilinos.Location = new System.Drawing.Point(12, 12);
-            this.LstInquilinos.MultiSelect = false;
+            this.LstInquilinos.Location = new System.Drawing.Point(12, 70);
             this.LstInquilinos.Name = "LstInquilinos";
-            this.LstInquilinos.Size = new System.Drawing.Size(776, 271);
+            this.LstInquilinos.Size = new System.Drawing.Size(1322, 275);
             this.LstInquilinos.TabIndex = 1;
             this.LstInquilinos.UseCompatibleStateImageBehavior = false;
             this.LstInquilinos.View = System.Windows.Forms.View.Details;
             // 
-            // Id_inquilinos
-            // 
-            this.Id_inquilinos.Text = "ID";
-            // 
-            // Nome
-            // 
-            this.Nome.Text = "Nome";
-            this.Nome.Width = 123;
-            // 
-            // Idade
-            // 
-            this.Idade.Text = "Idade";
-            this.Idade.Width = 55;
-            // 
-            // Sexo
-            // 
-            this.Sexo.Text = "Sexo";
-            this.Sexo.Width = 69;
-            // 
-            // Telefone
-            // 
-            this.Telefone.Text = "Telefone";
-            this.Telefone.Width = 164;
-            // 
-            // Email
-            // 
-            this.Email.Text = "Email";
-            this.Email.Width = 193;
-            // 
             // BtnRegistro_Inquilino
             // 
-            this.BtnRegistro_Inquilino.Location = new System.Drawing.Point(651, 341);
+            this.BtnRegistro_Inquilino.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistro_Inquilino.Location = new System.Drawing.Point(1207, 3);
             this.BtnRegistro_Inquilino.Name = "BtnRegistro_Inquilino";
-            this.BtnRegistro_Inquilino.Size = new System.Drawing.Size(118, 43);
+            this.BtnRegistro_Inquilino.Size = new System.Drawing.Size(127, 51);
             this.BtnRegistro_Inquilino.TabIndex = 2;
             this.BtnRegistro_Inquilino.Text = "Registrar";
             this.BtnRegistro_Inquilino.UseVisualStyleBackColor = true;
+            this.BtnRegistro_Inquilino.Click += new System.EventHandler(this.BtnRegistro_Inquilino_Click);
+            // 
+            // BtnAtualizar_Inquilinos
+            // 
+            this.BtnAtualizar_Inquilinos.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAtualizar_Inquilinos.Image = global::Desafio_ApCoders.Properties.Resources.refresh_curve_arrows_icon_icons_com_68503__1_;
+            this.BtnAtualizar_Inquilinos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAtualizar_Inquilinos.Location = new System.Drawing.Point(12, 3);
+            this.BtnAtualizar_Inquilinos.Name = "BtnAtualizar_Inquilinos";
+            this.BtnAtualizar_Inquilinos.Size = new System.Drawing.Size(185, 61);
+            this.BtnAtualizar_Inquilinos.TabIndex = 3;
+            this.BtnAtualizar_Inquilinos.Text = "Atualizar";
+            this.BtnAtualizar_Inquilinos.UseVisualStyleBackColor = true;
+            this.BtnAtualizar_Inquilinos.Click += new System.EventHandler(this.BtnAtualizar_Inquilinos_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(599, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 42);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Inquilinos";
             // 
             // FmrInquilinos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1346, 362);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnAtualizar_Inquilinos);
             this.Controls.Add(this.BtnRegistro_Inquilino);
             this.Controls.Add(this.LstInquilinos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FmrInquilinos";
-            this.Text = "FmrInquilinos";
+            this.Text = "Inquilinos";
+            this.Load += new System.EventHandler(this.FmrInquilinos_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListView LstInquilinos;
-        private System.Windows.Forms.ColumnHeader Id_inquilinos;
-        private System.Windows.Forms.ColumnHeader Nome;
-        private System.Windows.Forms.ColumnHeader Idade;
-        private System.Windows.Forms.ColumnHeader Sexo;
-        private System.Windows.Forms.ColumnHeader Telefone;
-        private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.Button BtnRegistro_Inquilino;
+        private System.Windows.Forms.Button BtnAtualizar_Inquilinos;
+        private System.Windows.Forms.Label label1;
     }
 }
